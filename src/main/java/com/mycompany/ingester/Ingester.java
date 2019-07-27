@@ -28,6 +28,9 @@ public class Ingester {
 	private static final Splitter COMMA_SPLITTER = Splitter.on(',');
 	private static final Logger log = LoggerFactory.getLogger(Ingester.class);
 
+	/**
+	 * Read file contents and split each line into InsuranceInformation.
+	 */
 	public Map<String, List<InsuranceInformation>> ingestAndSplitByCompany(String fileWithFullPath) {
 		try {
 			List<InsuranceInformation> insuranceInformationList = Files
@@ -53,7 +56,7 @@ public class Ingester {
 	}
 
 	/**
-	 * Parse LineContents and split into individual tokens
+	 * Parse line contents and split into individual tokens.
 	 */
 	private InsuranceInformation parse(String lineContents) {
 		List<String> parsedTokens = COMMA_SPLITTER.splitToList(lineContents);
@@ -84,6 +87,9 @@ public class Ingester {
 		return result;
 	}
 
+	/**
+	 * Write contents of InsuranceInformation to file.
+	 */
 	public void writeToFileContents(String outputDirectory,
 		String companyName,
 		List<InsuranceInformation> insuranceInformationList) {
