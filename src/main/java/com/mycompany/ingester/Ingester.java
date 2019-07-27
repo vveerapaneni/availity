@@ -19,6 +19,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Function;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +39,12 @@ public class Ingester {
 				.map(this::parse)
 				.collect(toList());
 
-			Map<String, List<InsuranceInformation>> groupByCompanyName =
+			Map<String, List<InsuranceInformation>> resultGroupedByCompanyName =
 				insuranceInformationList
 					.stream()
 					.collect(groupingBy(InsuranceInformation::getCompanyName));
 
-			return groupByCompanyName
+			return resultGroupedByCompanyName
 				.entrySet()
 				.stream()
 				.map(item -> new SimpleEntry<>(item.getKey(), removeDuplicatesAndSort(item.getValue())))
@@ -79,7 +80,7 @@ public class Ingester {
 				collectingAndThen(
 					toMap(
 						item -> Collections.singletonList(item.getUserId()),
-						item -> item,
+						Function.identity(),
 						maxBy(comparing(InsuranceInformation::getVersion))),
 					item -> new ArrayList<>(item.values()))
 			);
