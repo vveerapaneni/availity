@@ -1,0 +1,53 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+.classpath
+.project
+.settings
+*.swp
+target
+Thumbs.db
+temp-testng-customsuite.xml
+test-output
+.DS_Store
+*/target-eclipse
+*.diff
+*dso-boot-hotspot_*.jar
+web-app/plugins/*
+plugins/*
+*.idea
+*stacktrace.log
+*.iml
+*.ipr
+*.iws
+stacktrace.log
+.metadata
+out/*
+logs/*
+*/logs/*
+*/build
+build/*
+classes/*
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Other build tools
+node
+dist
+node_modules
+bower_components
+**/static/js/**
+**/static/css/**
+**/static/fonts/**
+**/static/images/**
+
+# coverage reports
+client/reports/*
+client/coverage/*
+client/bin/output.txt
+
+context.xml
+
+branches.txt
+*.log

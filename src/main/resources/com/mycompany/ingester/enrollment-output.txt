@@ -1,0 +1,28 @@
+JSR,John Smith,1,BCBS
+CJY,Charles Johnston,1,United Health Care
+AZY,Alice Zachary,1,Aetna
+Y345,Morgan Christie,1,Cigna
+D9865,Mark Wagner,1,Kaiser
+D13490,Tyler Smith,1,Wellpoint
+JST,John Stewart,1,Humana
+JST,John Stewart,20,Humana
+JST,John Stewart,34,Humana
+JST,John Stewart,4,Humana
+JST,John Stewart,1,Humana
+SF34,Sonia Fryman,1,United Health Care
+NH56,Niki Haldeman,1,Aetna
+CL9876,Collin Liebel,1,Cigna
+CA6543,Carl Alan,1,Kaiser
+FD6543,Felicia Deberry,1,Wellpoint
+MC6198,Markita Cosper,1,Cigna
+CB87000,Candy Brisson,1,Kaiser
+RH87615,Rosanna Haake,1,Wellpoint
+JP87900,Jaye Pickert,1,United Health Care
+GB871345,Gaye Bohanon,1,Humana
+OH61544,Omar Herdman,1,Humana
+BC91754,Brittaney Costanzo,1,Humana
+TF781654,Tuan Ferrari,1,Humana
+GB871345,Gaye Bohanon,21,Humana
+GB871345,Gaye Bohanon,87,Humana
+GB871345,Gaye Bohanon,16,Humana
+GB871345,Gaye Bohanon,19,Humana
