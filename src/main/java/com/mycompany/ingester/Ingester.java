@@ -106,7 +106,8 @@ public class Ingester {
 					item.getUserId(),
 					item.getNameFormattedByLastAndFirst(),
 					item.getVersion(),
-					item.getCompanyName()))
+					item.getCompanyName())
+				)
 				.forEach(printWriter::println);
 		} catch (FileNotFoundException e) {
 			log.error("Unable to write to file {}", outputFileWithFullName);
