@@ -26,6 +26,6 @@ public class TestMain {
 			ingester.ingestAndSplitByCompany(inputFileNameWithFullPath);
 
 		result.forEach((key, value) -> log.info("{}", concatInsuredInformation(value)));
-		result.forEach((key, value) -> ingester.writeToFileContents(inputOutputDirectory, key, value));
+		result.forEach((key, value) -> ingester.writeContentsToFile(inputOutputDirectory, key, value));
 	}
 }

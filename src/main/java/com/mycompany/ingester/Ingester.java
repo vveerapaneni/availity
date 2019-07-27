@@ -91,7 +91,7 @@ public class Ingester {
 	/**
 	 * Write contents of InsuranceInformation to file.
 	 */
-	public void writeToFileContents(String outputDirectory,
+	public void writeContentsToFile(String outputDirectory,
 		String companyName,
 		List<InsuranceInformation> insuranceInformationList) {
 		String outputFileWithFullName = String.format("%s%s", outputDirectory, companyName);

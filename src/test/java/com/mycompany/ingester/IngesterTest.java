@@ -15,7 +15,7 @@ class IngesterTest {
 	void ingestAndSplitByCompanyAndPersist() {
 		ingester
 			.ingestAndSplitByCompany(inputFileNameWithFullPath)
-			.forEach((key, value) -> ingester.writeToFileContents(inputOutputDirectory, key, value));
+			.forEach((key, value) -> ingester.writeContentsToFile(inputOutputDirectory, key, value));
 		Assertions.assertTrue(Boolean.TRUE);
 	}
 }
