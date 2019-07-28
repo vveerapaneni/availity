@@ -23,7 +23,9 @@ import java.util.function.Function;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
+import com.google.common.base.Strings;
 
 public class Ingester {
 	private static final Splitter COMMA_SPLITTER = Splitter.on(',');
@@ -33,6 +35,7 @@ public class Ingester {
 	 * Read file contents and split each line into InsuranceInformation.
 	 */
 	public Map<String, List<InsuranceInformation>> ingestAndSplitByCompany(String fileWithFullPath) {
+		Preconditions.checkArgument(!Strings.isNullOrEmpty(fileWithFullPath), "fileWithFullPath is required");
 		try {
 			List<InsuranceInformation> insuranceInformationList = Files
 				.lines(Paths.get(fileWithFullPath))
@@ -94,6 +97,8 @@ public class Ingester {
 	public void writeContentsToFile(String outputDirectory,
 		String companyName,
 		List<InsuranceInformation> insuranceInformationList) {
+		Preconditions.checkArgument(!Strings.isNullOrEmpty(outputDirectory), "outputDirectory is required");
+		Preconditions.checkArgument(!Strings.isNullOrEmpty(companyName), "companyName is required");
 		String outputFileWithFullName = String.format("%s%s", outputDirectory, companyName);
 		Paths.get(outputFileWithFullName);
 
